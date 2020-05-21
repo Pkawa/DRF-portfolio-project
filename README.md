@@ -1,2 +1,1 @@
-# DRF-portfolio-project
-Django Rest Framework portfolio project
+# Django Rest Framework portfolio project [![Build Status](https://travis-ci.org/Pkawa/DRF-portfolio-project.svg?branch=master)](https://travis-ci.org/Pkawa/DRF-portfolio-project) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2075693c214e4d198b1ece5bddc23075)](https://app.codacy.com/manual/Pkawa/DRF-portfolio-project?utm_source=github.com&utm_medium=referral&utm_content=Pkawa/DRF-portfolio-project&utm_campaign=Badge_Grade_Dashboard)
