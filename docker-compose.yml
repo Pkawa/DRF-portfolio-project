@@ -7,8 +7,8 @@ services:
     ports: 
       - "8000:8000"
     env_file:
-      - api_env.list.develop
-      - db_env.list.develop # contains user variables
+      - api_env.list
+      - db_env.list # contains db name and user variables
     volumes: 
       - ./app:/app
     command: >
@@ -21,4 +21,4 @@ services:
   db:
     image: postgres:10-alpine
     env_file:
-      - db_env.list.develop
+      - db_env.list
