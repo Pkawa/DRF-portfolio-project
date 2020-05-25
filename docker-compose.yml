@@ -7,7 +7,7 @@ services:
     ports: 
       - "8000:8000"
     env_file:
-      - env.list
+      - env.list.develop
     volumes: 
       - ./app:/app
     command: >
