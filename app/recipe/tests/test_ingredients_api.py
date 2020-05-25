@@ -56,16 +56,13 @@ class PrivateIngredientsAPITests(TestCase):
             email='another@user.com',
             password='SomePassword123'
         )
-        Ingredient.objects.create(user=another_user, name='Papaya')  # ingredient assigned to another user
+        # ingredient assigned to another user that we won't be abl to see
+        Ingredient.objects.create(user=another_user, name='Papaya')
+        # The only visible ingredient
         lime = Ingredient.objects.create(user=self.user, name='Lime')
-
-        # valid data for comparison
-        ingredients = Ingredient.objects.all().order_by('-name')
-        serializer = IngredientSerializer(ingredients, many=True)
         # api response
         response = self.client.get(INGREDIENTS_URL)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data), 1)
         self.assertEqual(response.data[0]['name'], lime.name)
-        self.assertNotEqual(response.data, serializer.data)
