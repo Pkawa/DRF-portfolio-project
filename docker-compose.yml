@@ -8,6 +8,7 @@ services:
       - "8000:8000"
     env_file:
       - api_env.list.develop
+      - db_env.list.develop # contains user variables
     volumes: 
       - ./app:/app
     command: >
